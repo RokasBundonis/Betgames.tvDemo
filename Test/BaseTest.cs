@@ -25,15 +25,6 @@ namespace FinalProject.Test
             BetgamesHomepagePage = new BetgamesHomepagePage(driver);
         }
 
-        [TearDown]
-        public static void TearDown()
-        {
-            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-            {
-                MyScreenshot.TakeScreenshot(driver);
-            }
-        }
-
         [OneTimeTearDown]
         public static void OneTimeTearDown()
         {
